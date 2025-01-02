@@ -18,7 +18,7 @@ namespace HelloWorldApp
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddControllersWithViews(); 
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -33,17 +33,17 @@ namespace HelloWorldApp
                 app.UseHsts(); 
             }
 
-            app.UseStaticFiles(); 
+            app.UseStaticFiles();
 
-            app.UseRouting(); 
+            app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    context.Response.ContentType = "image/jpeg";
-                    var filePath = env.WebRootPath + "/DevOps.jpg"; 
-                    await context.Response.SendFileAsync(filePath); 
+                    context.Response.ContentType = "image/jpeg"; 
+                    var filePath = env.WebRootPath + "/images/DevOps.jpg"; 
+                    await context.Response.SendFileAsync(filePath);
                 });
             });
         }
