@@ -144,10 +144,10 @@ stages:
 ---
 1. Go to pipelines
 2. Select the build pipeline
-3. Click on Run Pipeline
+3. Click on Run Pipeline in the top right corner
 ---
 
-### Now, it is time for running the release pipeline.
+### Now, run the release pipeline.
 ---
 1. Go to Releases
 2. Select the release
