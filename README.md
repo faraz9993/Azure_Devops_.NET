@@ -29,7 +29,7 @@
 https://youtu.be/O-HQmWniyyY?si=ZIOb4PiHuyj2qBMZ
 ```
 
-### Steps to create the Publish Pipeline:
+### Steps to create the Build Pipeline:
 ---
 1. Login to the Azure DevOps
 2. Go to pipelines
