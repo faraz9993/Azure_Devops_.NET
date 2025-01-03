@@ -6,6 +6,7 @@
 
 ### We also need to make sure .NET application is running successfully in local.
 
+### The GitHub repo contains files such as:
 ----
 1. Program.cs
 2. Startup.cs
