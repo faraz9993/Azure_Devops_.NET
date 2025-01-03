@@ -4,7 +4,7 @@
 
 ### We need to create resources such as WebApp and FuunctionApp on Microsoft Azure.
 
-### We need to have several files of the .NET code to be pushed in the GitHub repo. However. before pushing the code to the repo make sure .NET application is running successfully in local.
+### We also need to make sure .NET application is running successfully in local.
 
 ----
 1. Program.cs
