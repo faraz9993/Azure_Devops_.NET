@@ -21,6 +21,12 @@
 2. Release
 ----
 
+### However, before that we need to have a runner. We will create a self-hosted runner. Below is the link of the video that will help to create the self-hosted runner either in the Local Machine or the VM.
+
+```
+https://youtu.be/O-HQmWniyyY?si=ZIOb4PiHuyj2qBMZ
+```
+
 ### Steps to create the Publish Pipeline:
 ---
 1. Login to the Azure DevOps
@@ -36,7 +42,7 @@
 ### You can rename the pipeline by clicking on the tree dots in the pipeline section.
 
 
-### What we need to do here is we will have our .NET code that will be build and published in the build pipeline and that pipeline will create an artifact.
+### What we need to do here is we will have our .NET code that will get build and published in the build pipeline and that pipeline will create an artifact. The same artifact will then be used by another Release pipeline. Below is our code for the build pipeline. 
 
 
 ```
@@ -76,7 +82,20 @@ stages:
 
 ### Steps to create the Release Pipeline:
 ---
-1. Go to release section
+1. Go to Release section
 2. Click on Create Release
-3. 
+3. Stages for a trigger change from automated to manual: Stage 1
+4. Select the appropriate Artifact that is being created form build pipeline.
+5. Create
+6. Now, click on the Release.
+7. Click on Edit option > Edit PipeClick online
+8. Click on Stage 1 Job, 1 Task
+9. Deploy Azure App Service
+10. Display name: Deploy Azure App Service
+11. Connection Type: Azure Resource Manager
+12. Azure Subscription: faraz-svc
+13. App Service Type: Web App on Linux
+14. App Service Name: FarazWebApp
+15. Package or Folder: "$(System.DefaultWorkingDirectory)/_New_Build.Azure_Devops_.NET/drop"
+16. Startup command: dotnet HelloWorldApp.dll 
 ---
