@@ -1,4 +1,4 @@
-# Deployment of .NET application on WebApp Azure FunctionApp and .
+# Deployment of .NET application on Azure WebApp and FunctionApp.
 
 ### We have our code pushed in GitHub repo. The code is fetched from GitHub repo to the Azure DevOps CI/CD pipeline and deployed on Azure resources such as WebApp and FunctionApp.
 
