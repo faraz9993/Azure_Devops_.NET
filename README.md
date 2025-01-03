@@ -104,7 +104,7 @@ stages:
         publishLocation: 'Container'
 ```
 
-### Steps to create the Release Pipeline for the deployment on the WebApp same way you can do for the FuncionApp:
+### Steps to create the Release Pipeline for the deployment on the WebApp same way you can use for the FuncionApp:
 ---
 1. Go to Release section
 2. Click on Create Release
