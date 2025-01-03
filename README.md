@@ -220,7 +220,7 @@ dotnet help	                  Shows more detailed documentation online for the c
 dotnet migrate	                  Migrates a valid Preview 2 project to a .NET Core SDK 1.0 project.
 dotnet msbuild	                  Provides access to the MSBuild command line.
 dotnet restore	                  Restores the dependencies for a given application.
-dotnet sdk check	            Shows up-to-date status of installed SDK and Runtime versions.
+dotnet sdk check	          Shows up-to-date status of installed SDK and Runtime versions.
 dotnet sln	                  Options to add, remove, and list projects in a solution file.
 dotnet store	                  Stores assemblies in the runtime package store.
 dotnet test	                  Runs tests using a test runner.
