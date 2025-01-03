@@ -78,7 +78,6 @@ stages:
         publishLocation: 'Container'
 ```
 
-
 ### Steps to create the Release Pipeline for the deployment on the WebApp same way you can do for the FuncionApp:
 ---
 1. Go to Release section
@@ -99,7 +98,7 @@ stages:
 16. Startup command: dotnet HelloWorldApp.dll 
 ---
 
-### We also need to select the appropriate runner.
+### We also need to select the appropriate runner in the Release pipeline.
 ---
 1. Go to Release from the left-side panel.
 2. Click on the release.
@@ -131,3 +130,52 @@ stages:
 ---
 
 ### The logs will show that the content is deployed on the webpage and it will also show you the URL.
+
+### Below is the code for Release Pipeline for the deployment on the FuncitonApp same way you can do for the WebApp:
+
+```
+stages:
+- stage: __default
+  jobs:
+  - job: Job
+    pool:
+      name: 'Default'
+    steps:
+
+    - task: DownloadBuildArtifacts@0
+      displayName: 'Download Build Artifacts'
+      inputs:
+        buildType: 'specific'
+        project: 'DotNet_Pipeline'
+        pipeline: 'Build-faraz9993.netapp'
+        buildVersionToDownload: 'latest'
+        downloadPath: '$(Pipeline.Workspace)'
+        artifactName: 'netapplication'
+
+    - task: AzureFunctionApp@1
+      displayName: 'Release Live discounts Func'
+      inputs:
+        azureSubscription: faraz-svc
+        appType: functionApp
+        appName: 'FarazFunctionApp'
+        package: '$(Pipeline.Workspace)/netapplication/*.zip'
+        deploymentMethod: 'runFromPackage'
+
+    - task: AzureFunctionApp@2
+      displayName: 'Release Func'
+      inputs:
+        connectedServiceNameARM: faraz-svc
+        appType: functionApp
+        appName: 'FarazFunctionApp'
+        package: '$(Pipeline.Workspace)/netapplication/*.zip'
+        deploymentMethod: 'runFromPackage'
+
+    - task: AzureWebApp@1
+      displayName: 'Deploy to Azure Web App'
+      inputs:
+        azureSubscription: faraz-svc
+        appName: 'FarazWebApp'
+        appType: webApp
+        package: '$(Pipeline.Workspace)/netapplication/*.zip'
+        deploymentMethod: 'auto'
+```
