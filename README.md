@@ -157,7 +157,7 @@ stages:
 
 ### The logs will show that the content is deployed on the webpage and it will also show you the URL.
 
-### Below is the code for Release Pipeline for the deployment on the FuncitonApp same way you can do for the WebApp:
+### Below is the code for Release Pipeline for the deployment on the FuncitonApp and the WebApp:
 
 ```
 stages:
