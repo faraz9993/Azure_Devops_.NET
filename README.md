@@ -39,7 +39,7 @@
 ### What we need to do here is we will have our .NET code that will be build and published in the build pipeline and that pipeline will create an artifact.
 
 
-----
+```
 trigger:
   branches:
     include:
@@ -71,7 +71,7 @@ stages:
         pathToPublish: $(Build.ArtifactStagingDirectory)
         artifactName: 'drop'
         publishLocation: 'Container'
-----
+```
 
 
 ### Steps to create the Release Pipeline:
