@@ -206,7 +206,7 @@ stages:
         deploymentMethod: 'auto'
 ```
 ## Dotnet Commands
----
+```
   Command	                             Function
 dotnet new	                  Initializes a C# or F# project for a given template.
 dotnet build	                Builds a .NET application.
@@ -224,4 +224,4 @@ dotnet sdk check	            Shows up-to-date status of installed SDK and Runtim
 dotnet sln	                  Options to add, remove, and list projects in a solution file.
 dotnet store	                Stores assemblies in the runtime package store.
 dotnet test	                  Runs tests using a test runner.
----
+```
