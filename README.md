@@ -63,9 +63,11 @@ https://youtu.be/O-HQmWniyyY?si=ZIOb4PiHuyj2qBMZ
 8. Save and Run
 ---
 
-### You can rename the pipeline by clicking on the tree dots in the pipeline section.
+### You can rename the pipeline by clicking on the three dots in the pipeline section.
 
-### What we need to do here is we will have our .NET code that will get build and published in the build pipeline and that pipeline will create an artifact. The same artifact will then be used by another Release pipeline. Below is our code for the build pipeline. 
+### Now, what we need to do here is we will have our .NET code that will get build and published in the build pipeline and that pipeline will create an artifact. The same artifact will then be used by the Release pipeline. 
+
+### Below is our code for the build pipeline. 
 
 
 ```
