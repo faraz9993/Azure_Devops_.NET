@@ -23,7 +23,7 @@
 2. Release
 ----
 
-### However, before that we need to have a runner. We will create a self-hosted runner. Below is the link of the video that will help to create the self-hosted runner either in the Local Machine or the VM.
+### However, before that we need to have a runner. We will create a self-hosted runner. Below is a link of the YouTube video that will help to create the self-hosted runner either in the Local Machine or the VM.
 
 ```
 https://youtu.be/O-HQmWniyyY?si=ZIOb4PiHuyj2qBMZ
