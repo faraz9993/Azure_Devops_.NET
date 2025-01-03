@@ -29,7 +29,8 @@
 https://youtu.be/O-HQmWniyyY?si=ZIOb4PiHuyj2qBMZ
 ```
 
-### We also need to create a service connection so that our pipeline can deploy the application on azure services.
+### We also need to create a service connection so that our pipeline can securely connect and deploy the application on external azure services.
+
 ---
 1. Project Setting
 2. Click on the Service Connection in the left side panel
