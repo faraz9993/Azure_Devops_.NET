@@ -29,6 +29,22 @@
 https://youtu.be/O-HQmWniyyY?si=ZIOb4PiHuyj2qBMZ
 ```
 
+### We also need to create a service connection so that our pipeline can deploy the application on azure services.
+---
+1. Project Setting
+2. Click on the Service Connection in the left side panel
+3. New Service Connection
+4. Select "Azure Resource Manager" > Next
+5. Identity Type: App Registration (Automatic)
+6. Credential: "Workload Identity Federation"
+7. Scope level: Subscription
+8. Subscription: "e#####ps Le###y...."
+9. Resource Group: "sa1_****_eic_Fa***A***"
+10. Service Connection: *Give any appropraite name
+11. If needed Select "Grant accesss permission to all pipelines"
+12. Save
+---
+
 ### Steps to create the Build Pipeline:
 ---
 1. Login to the Azure DevOps
