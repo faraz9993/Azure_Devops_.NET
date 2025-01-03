@@ -41,7 +41,6 @@ https://youtu.be/O-HQmWniyyY?si=ZIOb4PiHuyj2qBMZ
 
 ### You can rename the pipeline by clicking on the tree dots in the pipeline section.
 
-
 ### What we need to do here is we will have our .NET code that will get build and published in the build pipeline and that pipeline will create an artifact. The same artifact will then be used by another Release pipeline. Below is our code for the build pipeline. 
 
 
@@ -80,7 +79,7 @@ stages:
 ```
 
 
-### Steps to create the Release Pipeline:
+### Steps to create the Release Pipeline for the deployment on the WebApp same way you can do for the FuncionApp:
 ---
 1. Go to Release section
 2. Click on Create Release
@@ -99,3 +98,36 @@ stages:
 15. Package or Folder: "$(System.DefaultWorkingDirectory)/_New_Build.Azure_Devops_.NET/drop"
 16. Startup command: dotnet HelloWorldApp.dll 
 ---
+
+### We also need to select the appropriate runner.
+---
+1. Go to Release from the left-side panel.
+2. Click on the release.
+3. Click on Edit option > Edit PipeClick online
+4. Click on Stage 1 Job, 1 Task
+5. Select "Run On Agent"
+6. Display name: Run On Agent
+7. Agent Pool: Default
+8. Parallelism: None
+9. Timeout: 0
+10. Job cancel timeout: 1
+11. Artifact download: Select the appropriate one.
+12. Run this job: Only when all previous jobs have succeeded.
+---
+
+### Now, it is time for running the build pipeline.
+---
+1. Go to pipelines
+2. Select the build pipeline
+3. Click on Run Pipeline
+---
+
+### Now, it is time for running the release pipeline.
+---
+1. Go to Releases
+2. Select the release
+3. On stages: Redeploy
+4. Click on Logs (Besides Redeploy)
+---
+
+### The logs will show that the content is deployed on the webpage and it will also show you the URL.
