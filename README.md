@@ -35,14 +35,19 @@ https://youtu.be/O-HQmWniyyY?si=ZIOb4PiHuyj2qBMZ
 2. Click on the Service Connection in the left side panel
 3. New Service Connection
 4. Select "Azure Resource Manager" > Next
-5. Identity Type: App Registration (Automatic)
-6. Credential: "Workload Identity Federation"
-7. Scope level: Subscription
-8. Subscription: "e#####ps Le###y...."
-9. Resource Group: "sa1_****_eic_Fa***A***"
-10. Service Connection: *Give any appropraite name
-11. If needed Select "Grant accesss permission to all pipelines"
-12. Save
+5. Identity Type: App Registration or managed identity (manual)
+6. Credential: "Secret"
+7. Environment: "Azure Cloud"
+8. Scope level: Subscription
+9. Subscription ID: 
+10. Subscription name: "e#####ps Le###y...."
+11. Authentication (client) ID:
+12. Directory (tenant) ID
+13. Credential: "Service Principal Key"
+14. Client Secret: 
+15. Service Connection Name: *Give any appropraite name
+16. If needed Select "Grant accesss permission to all pipelines"
+17. Save
 ---
 
 ### Steps to create the Build Pipeline:
