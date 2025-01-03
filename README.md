@@ -15,7 +15,7 @@
 5. wwwroot/images/DevOps.jpg
 ----
 
-### Once, you will have running code available in the repo, it is time to create FunctionApp or WebApp as per the need. 
+### Once, you will have running code available in the repo, it is time to create FunctionApp or WebApp on Microsoft Azure Portal as per the need. 
 
 ### Next step is to create Azure CI/CD pipeline. We will have two pipelines:
 ----
