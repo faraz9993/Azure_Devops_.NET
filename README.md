@@ -12,6 +12,7 @@
 2. Startup.cs
 3. HelloWorld.csproj
 4. Azure_Devops_.NET.sln
+5. wwwroot/images/DevOps.jpg
 ----
 
 ### Once, you will have running code available in the repo, it is time to create FunctionApp or WebApp as per the need. 
